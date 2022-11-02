@@ -19,6 +19,9 @@ public abstract class TestScriptBase extends TestRunner {
     protected PageDashboard pagedashboard;
 
     protected PageDemoUiComponents pageDemoUiComponents;
+
+    protected PageLoginKiotviet pageLoginKiotviet;
+
     @Override
     protected final void beforeSetup(WebDriver webDriver, WebBrowser currentBrowser) {
         // Only create instance for page common here

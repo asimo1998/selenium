@@ -8,3 +8,4 @@ public class currentDate {
     private static DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     public static String formattedCurrentDate = myDateObj.format(myFormatObj);
 }
+// tạo class helper datetime => xử lý những phần liên quan

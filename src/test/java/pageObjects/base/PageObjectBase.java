@@ -338,7 +338,6 @@ public class PageObjectBase {
                 }
             }
         };
-
         return wait.until(condition);
     }
 

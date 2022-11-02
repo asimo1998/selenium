@@ -32,7 +32,7 @@ public class PageDashboard extends PageObjectBase {
     }
 
     public void clickOnButtonCreateNewUser() {
-        waitElementDisplayed(PageDashBoardLocator.spanCreateNewUser,5);
+        waitElementDisplayed(PageDashBoardLocator.spanCreateNewUser,5); // nên đặt thời gian đợi từ 20 - 30s
         Sleep.refreshTime();
         clickElement(PageDashBoardLocator.spanCreateNewUser);
         Sleep.defaultTime();
@@ -108,15 +108,13 @@ public class PageDashboard extends PageObjectBase {
     public void searchUser(String user) {
         Sleep.refreshTime();
         enterText(PageDashBoardLocator.inputSearchToolbar, user);
-//        Sleep.refreshTime();
-//        clickElement(PageDashBoardLocator.searchBtnDashboard);
     }
 
-    public void performDeleteUser(String ignoredUser) {
-        waitElementDisplayed(PageCommonLocator.spanUsername.addParams(ignoredUser),5);
+    public void performDeleteUser(String user) {
+        waitElementDisplayed(PageCommonLocator.spanUsername.addParams(user),5);
 
         Sleep.longTime();
-        clickElement(PageDashBoardLocator.buttonActons);
+        clickElement(PageDashBoardLocator.buttonActions);
 
         Sleep.refreshTime();
         clickElement(PageDashBoardLocator.aDelete);
@@ -147,7 +145,6 @@ public class PageDashboard extends PageObjectBase {
         Sleep.refreshTime();
         Assert.assertTrue(actual);
     }
-
 
     public void verifyDatetime(String expectDatetime, String userName) {
         waitElementDisplayed(PageDashBoardLocator.spanVerifyUsername.addParams(userName),5);

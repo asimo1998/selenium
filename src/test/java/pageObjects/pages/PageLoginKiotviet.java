@@ -57,9 +57,7 @@ public class PageLoginKiotviet extends PageObjectBase {
     }
 
     /*==========VERIFY=========*/
-    public void verifyTaskbarOverviewIsDisplay(String expectedResult) {
+    public void verifyTaskbarOverviewIsDisplay() {
         waitElementDisplayed(PageLoginKiotvietLocator.verifyTaskbarOverview, 10);
-        String actualResult = getText(PageLoginKiotvietLocator.verifyTaskbarOverview);
-        Assert.assertEquals(actualResult, expectedResult);
     }
 }

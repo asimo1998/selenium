@@ -32,7 +32,7 @@ public class PageDashboard extends PageObjectBase {
     }
 
     public void clickOnButtonCreateNewUser() {
-        waitElementDisplayed(PageDashBoardLocator.spanCreateNewUser,5); // nên đặt thời gian đợi từ 20 - 30s
+        waitElementDisplayed(PageDashBoardLocator.spanCreateNewUser,5); // nen dat thoi gian doi tu 20 - 30s
         Sleep.refreshTime();
         clickElement(PageDashBoardLocator.spanCreateNewUser);
         Sleep.defaultTime();

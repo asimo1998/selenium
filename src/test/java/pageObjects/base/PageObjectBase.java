@@ -2,6 +2,7 @@ package pageObjects.base;
 
 import configuration.models.WebBrowser;
 import common.StringUtils;
+import org.openqa.selenium.interactions.Actions;
 import selenium.models.ILocator;
 import selenium.models.Locator;
 import library.system.Sleep;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import pageObjects.pages.PageCommon;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
@@ -237,6 +239,7 @@ public class PageObjectBase {
     protected void clickElement(ILocator locator) {
         WebElement element = this.getWebElement(locator);
         waitElementClickable(locator, 20);
+        Actions action = new Actions(this.webDriver);
         element.click();
     }
 

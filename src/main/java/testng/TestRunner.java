@@ -53,6 +53,7 @@ public abstract class TestRunner {
         this.accountManager = AccountManager.getInstance();
         beforeSetup(this.webDriver, this.currentBrowser);
         setup(this.webDriver, this.currentBrowser);
+        webDriver.manage().window().maximize();
     }
 
     @AfterMethod

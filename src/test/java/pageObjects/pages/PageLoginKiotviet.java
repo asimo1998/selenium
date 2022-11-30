@@ -43,21 +43,33 @@ public class PageLoginKiotviet extends PageObjectBase {
 
     public void enterDomainShop(String domain) {
         waitElementDisplayed(PageLoginKiotvietLocator.inputDomainShop, 10);
+        clearText(PageLoginKiotvietLocator.inputDomainShop);
         enterText(PageLoginKiotvietLocator.inputDomainShop, domain);
     }
 
     public void enterUserName(String userName) {
         waitElementDisplayed(PageLoginKiotvietLocator.inputUsername, 10);
+        clearText(PageLoginKiotvietLocator.inputUsername);
         enterText(PageLoginKiotvietLocator.inputUsername, userName);
     }
 
     public void enterPassword(String password) {
         waitElementDisplayed(PageLoginKiotvietLocator.inputPassword, 10);
+        clearText(PageLoginKiotvietLocator.inputPassword);
         enterText(PageLoginKiotvietLocator.inputPassword, password);
     }
 
     /*==========VERIFY=========*/
     public void verifyTaskbarOverviewIsDisplay() {
         waitElementDisplayed(PageLoginKiotvietLocator.verifyTaskbarOverview, 10);
+    }
+
+    public void loginKiotviet(String domain, String userName, String password){
+        this.clickOnButtonLogin();
+        this.enterDomainShop(domain);
+        this.clickOnButtonEnterTheShop();
+        this.enterUserName(userName);
+        this.enterPassword(password);
+        this.clickOnButtonManage();
     }
 }
